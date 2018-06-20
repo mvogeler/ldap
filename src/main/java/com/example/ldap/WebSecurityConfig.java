@@ -39,7 +39,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/mathematicians").hasRole("MATHEMATICIANS")
                 .anyRequest().fullyAuthenticated()
             .and()
-            .formLogin();
+            .formLogin()
+            .and()
+            .httpBasic();
     }
 
 
