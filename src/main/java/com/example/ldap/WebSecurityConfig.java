@@ -25,12 +25,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Value("${ldap.user.dn.pattern}")
     private String ldapUserDnPattern;
-
-    @Value("${ldap.enabled}")
-    private String ldapEnabled;
-
-
-
+    
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
